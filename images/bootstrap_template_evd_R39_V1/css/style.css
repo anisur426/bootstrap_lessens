@@ -1,0 +1,84 @@
+.header_area, .footer_area {
+	background:blue;
+}
+.header {
+	padding:20px;
+	color:#fff;
+}
+.header h2{
+	margin:0;
+	font-size:25px;
+}
+.header p{
+	margin:0;
+	letter-spacing:1px;
+}
+.nav {}
+.nav ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.nav ul li{
+	float:left;
+}
+.nav ul li a{
+	display:block;
+	text-decoration:none;
+	padding:10px 20px;
+}
+.nav ul li a:hover{
+	background:orange;
+	color:#000;
+}
+.h_menu {
+	background:#ddd;
+	box-shadow:inset 2px 2px 5px rgba(0,0,0,0.3), inset -2px -2px 5px rgba(0,0,0,0.3), 0 0 5px rgba(0,0,0,0.3);
+}
+.h_menu ul {
+	margin:0;
+	padding:10px;
+	list-style:none;
+}
+.h_menu ul li {
+	border-bottom:1px solid #fff;
+}
+.h_menu ul li a {
+	display:block;
+	text-decoration:none;
+	padding:10px;
+	color:green;
+	transition:0.5s;
+}
+.h_menu ul li:last-child {
+	border-bottom:0px solid #fff;
+}
+.h_menu ul li a:hover {
+	background:#000;
+	color:#fff;
+}
+.content {
+	box-shadow:inset 2px 2px 5px rgba(0,0,0,0.3), inset -2px -2px 5px rgba(0,0,0,0.3), 0 0 5px rgba(0,0,0,0.3);
+	padding:20px;
+}
+.footer_area {
+	padding:20px;
+	color:#fff;
+	text-align:center;
+	margin-top:20px;
+}
+.search_area {
+	box-shadow:inset 2px 2px 5px rgba(0,0,0,0.3), inset -2px -2px 5px rgba(0,0,0,0.3), 0 0 5px rgba(0,0,0,0.3);
+	padding:20px;
+	margin-top:20px;
+	background:#ddd;
+}
+.search_area input[type=search] {
+	width:50%;
+	border:1px solid #ddd;
+	height:25px;
+
+}
+.search_area input[type=button] {
+	
+}
