@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- 🧠 Basic Meta Info -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My School | Bootstrap Template</title>
+
+  <!-- 🌐 Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- 🎨 Custom CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      background-image: url('images/school-banner.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    #about img {
+      border-radius: 10px;
+    }
+
+    /* ===== COURSE SECTION ===== */
+    #courses .card {
+      transition: 0.3s;
+    }
+
+    #courses .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ===== TEACHERS ===== */
+    #teachers img {
+      border: 4px solid #0d6efd;
+      padding: 3px;
+    }
+
+    /* ===== GALLERY ===== */
+    #gallery img {
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    #gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonial {
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: #0d6efd;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    /* ===== ADMISSION FORM ===== */
+    .admission-form {
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 30px;
+    }
+
+    /* ===== EVENTS ===== */
+    .event-card {
+      border-left: 5px solid #0d6efd;
+      padding: 10px 15px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🧭 Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">My School</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="navbarNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="#teachers">Teachers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#admission">Admission</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 🎓 Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>Welcome to My School</h1>
+      <p>“Learn Today, Lead Tomorrow”</p>
+      <a href="#about" class="btn btn-light btn-lg mt-3">Discover More</a>
+    </div>
+  </section>
+
+  <!-- 🏫 About Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="images/school-building.jpg" class="img-fluid" alt="School Building">
+        </div>
+        <div class="col-md-6">
+          <h2>About Our School</h2>
+          <p>Our school is committed to providing top-notch education with a focus on character, creativity, and critical thinking. We offer a friendly environment, modern classrooms, and experienced teachers who care for every student.</p>
+          <ul>
+            <li>Modern Classroom & Smart Board</li>
+            <li>Library & Computer Lab</li>
+            <li>Playground & Sports Activities</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📚 Courses -->
+  <section id="courses" class="bg-light py-5">
+    <div class="container text-center">
+      <h2>Our Popular Courses</h2>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/course1.jpg" class="card-img-top" alt="Science">
+            <div class="card-body">
+              <h5 class="card-title">Science</h5>
+              <p class="card-text">We offer a hands-on science program with modern labs and experiments.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/course2.jpg" class="card-img-top" alt="Arts">
+            <div class="card-body">
+              <h5 class="card-title">Arts</h5>
+              <p class="card-text">Encouraging creativity through drawing, music, dance and literature.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/course3.jpg" class="card-img-top" alt="Commerce">
+            <div class="card-body">
+              <h5 class="card-title">Commerce</h5>
+              <p class="card-text">Learn business and finance fundamentals through practical learning.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 👨‍🏫 Teachers Section -->
+  <section id="teachers" class="py-5">
+    <div class="container text-center">
+      <h2>Meet Our Teachers</h2>
+      <div class="row mt-4">
+        <div class="col-md-3">
+          <img src="images/teacher1.jpg" class="rounded-circle mb-3" width="120" height="120" alt="Teacher">
+          <h5>Mr. Rahman</h5>
+          <p>Science Teacher</p>
+        </div>
+        <div class="col-md-3">
+          <img src="images/teacher2.jpg" class="rounded-circle mb-3" width="120" height="120" alt="Teacher">
+          <h5>Ms. Ayesha</h5>
+          <p>English Teacher</p>
+        </div>
+        <div class="col-md-3">
+          <img src="images/teacher3.jpg" class="rounded-circle mb-3" width="120" height="120" alt="Teacher">
+          <h5>Mr. Karim</h5>
+          <p>Math Teacher</p>
+        </div>
+        <div class="col-md-3">
+          <img src="images/teacher4.jpg" class="rounded-circle mb-3" width="120" height="120" alt="Teacher">
+          <h5>Mrs. Ruma</h5>
+          <p>Arts Teacher</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🏆 Achievements -->
+  <section id="achievements" class="bg-light py-5">
+    <div class="container text-center">
+      <h2>Our Achievements</h2>
+      <div class="row mt-4">
+        <div class="col-md-3">
+          <h3>500+</h3>
+          <p>Students Enrolled</p>
+        </div>
+        <div class="col-md-3">
+          <h3>50+</h3>
+          <p>Qualified Teachers</p>
+        </div>
+        <div class="col-md-3">
+          <h3>25+</h3>
+          <p>National Awards</p>
+        </div>
+        <div class="col-md-3">
+          <h3>10+</h3>
+          <p>Years of Excellence</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📅 Events / Notice Board -->
+  <section id="events" class="py-5">
+    <div class="container">
+      <h2 class="text-center">Upcoming Events & Notices</h2>
+      <div class="mt-4">
+        <div class="event-card">
+          <h5>Annual Sports Day</h5>
+          <p>Date: 15 October 2025 | Venue: School Playground</p>
+        </div>
+        <div class="event-card">
+          <h5>Science Fair 2025</h5>
+          <p>Date: 30 October 2025 | Venue: Auditorium</p>
+        </div>
+        <div class="event-card">
+          <h5>Admission Open for 2026</h5>
+          <p>Apply before 30 November 2025</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🧾 Admission Form -->
+  <section id="admission" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center">Admission Form</h2>
+      <form class="admission-form mt-4">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" placeholder="Enter your full name">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="Enter your email">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Phone</label>
+            <input type="text" class="form-control" placeholder="Enter phone number">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Class</label>
+            <select class="form-select">
+              <option>Class 6</option>
+              <option>Class 7</option>
+              <option>Class 8</option>
+              <option>Class 9</option>
+              <option>Class 10</option>
+            </select>
+          </div>
+          <div class="col-12 mb-3">
+            <label class="form-label">Address</label>
+            <textarea class="form-control" rows="3" placeholder="Enter your address"></textarea>
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-primary btn-lg">Submit Application</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- 🖼️ Gallery -->
+  <section id="gallery" class="py-5">
+    <div class="container text-center">
+      <h2>Photo Gallery</h2>
+      <div class="row mt-4 g-3">
+        <div class="col-md-4">
+          <img src="images/gallery1.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-4">
+          <img src="images/gallery2.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-4">
+          <img src="images/gallery3.jpg" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 💬 Testimonials -->
+  <section id="testimonials" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center">What Students Say</h2>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="testimonial">
+            <p>“This school helped me discover my true potential. Teachers are friendly and supportive.”</p>
+            <h6>- Arafat (Class 10)</h6>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial">
+            <p>“The best school for both education and extracurricular activities.”</p>
+            <h6>- Ruma (Class 9)</h6>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial">
+            <p>“Modern facilities, quality teachers and fun learning experience.”</p>
+            <h6>- Sohan (Class 8)</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📍 Contact -->
+  <section id="contact" class="py-5 bg-primary text-white text-center">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Email: info@myschool.com | Phone: +880 1234 567 890</p>
+      <p>Address: 123, Mirpur, Dhaka</p>
+      <div>
+        <a href="#" class="btn btn-light me-2">Facebook</a>
+        <a href="#" class="btn btn-light">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⚙️ Footer -->
+  <footer>
+    <p>&copy; 2025 My School | Designed with ❤️ by Anisur</p>
+  </footer>
+
+  <!-- ⚙️ Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

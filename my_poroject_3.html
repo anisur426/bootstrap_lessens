@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stellar Academy — School Template</title>
+
+  <!-- Bootstrap CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Optional: Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#0d6efd;
+      --accent:#0b5ed7;
+      --muted:#6c757d;
+      --card-radius:12px;
+    }
+    html,body{font-family: 'Roboto', Arial, sans-serif; scroll-behavior: smooth;}
+    /* NAV */
+    .navbar-brand { font-weight:700; letter-spacing: .4px; }
+    /* HERO */
+    .hero {
+      background-image: url('images/hero-banner.jpg'); /* replace with images/hero-banner.jpg */
+      background-size: cover;
+      background-position: center;
+      height: 78vh;
+      min-height: 480px;
+      display:flex;
+      align-items:center;
+      color: white;
+      position: relative;
+    }
+    .hero::after{
+      content: "";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.55));
+    }
+    .hero .hero-inner{ position: relative; z-index: 2; }
+    .hero h1{ font-size: clamp(28px, 4vw, 48px); font-weight:700; }
+    .hero p{ font-size:clamp(14px,1.4vw,18px); color: #f1f5f9; }
+
+    /* SECTION HEADINGS */
+    .section-title{ margin-bottom: 1.6rem; font-weight:600; }
+    .card-rounded{ border-radius: var(--card-radius); }
+
+    /* COURSES */
+    .course-icon { font-size: 28px; color: var(--primary); }
+
+    /* TEACHERS */
+    .teacher-card img{ width: 140px; height: 140px; object-fit:cover; border-radius:50%; border:4px solid #fff; box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+
+    /* NOTICE BOARD */
+    .notice-item{ border-left: 4px solid var(--primary); padding: 12px 16px; margin-bottom: 12px; background: #fff; border-radius:8px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+
+    /* GALLERY */
+    #gallery img{ width:100%; height:220px; object-fit:cover; border-radius:8px; }
+
+    /* TESTIMONIAL */
+    .testimonial { background:#f8f9fa; padding:18px; border-radius:10px; }
+
+    /* FOOTER */
+    footer { background: var(--primary); color:#fff; padding: 40px 0; }
+
+    /* FORM */
+    .admission-form .form-control, .contact-form .form-control { border-radius:8px; }
+
+    /* SMALL STYLES */
+    .badge-custom { background: var(--accent); color:#fff; border-radius: 8px; padding:6px 10px; }
+    .shadow-soft { box-shadow: 0 8px 24px rgba(13,110,253,0.08); }
+    .table-results td, .table-results th { vertical-align: middle; }
+
+    /* RESPONSIVE TWEAKS */
+    @media (max-width: 768px){
+      .hero { height: 56vh; min-height: 360px; }
+      .teacher-card img{ width:120px; height:120px; }
+      #gallery img{ height:160px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand text-primary" href="#">Stellar Academy</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="#teachers">Teachers</a></li>
+        <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="#admission">Admission</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="container hero-inner text-center">
+    <h1>Welcome to Stellar Academy</h1>
+    <p>Where curiosity is encouraged, creativity is cultivated, and character is built.</p>
+    <div class="mt-4">
+      <a href="#admission" class="btn btn-lg btn-light me-2">Apply Now</a>
+      <a href="#about" class="btn btn-lg btn-outline-light">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <img src="images/about-building.jpg" alt="School Building" class="img-fluid rounded shadow-soft">
+      </div>
+      <div class="col-lg-6">
+        <h2 class="section-title">About Stellar Academy</h2>
+        <p>Stellar Academy is a modern learning institution focused on high-quality education, character development and practical skills. We blend academics with sports, arts and technology to create well-rounded students.</p>
+
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li>✔ Modern Classrooms</li>
+              <li>✔ Experienced Teachers</li>
+              <li>✔ Science & Computer Labs</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li>✔ Library & Resource Center</li>
+              <li>✔ Sports & Extracurriculars</li>
+              <li>✔ Student Counseling</li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="#events" class="btn btn-primary mt-3">Upcoming Events</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section id="courses" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center">Our Courses & Programs</h2>
+    <div class="row g-4 mt-3">
+      <!-- Course card -->
+      <div class="col-md-4">
+        <div class="card card-rounded shadow-sm h-100">
+          <div class="card-body">
+            <div class="d-flex align-items-center">
+              <div class="me-3">
+                <span class="badge-custom">Science</span>
+              </div>
+              <div>
+                <h5 class="mb-1">Science Program</h5>
+                <p class="mb-0 text-muted">Physics, Chemistry, Biology with hands-on laboratory work.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-transparent border-0">
+            <a href="#" class="text-decoration-none">Learn more →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course card -->
+      <div class="col-md-4">
+        <div class="card card-rounded shadow-sm h-100">
+          <div class="card-body">
+            <div class="d-flex align-items-center">
+              <div class="me-3">
+                <span class="badge-custom">Arts</span>
+              </div>
+              <div>
+                <h5 class="mb-1">Arts & Humanities</h5>
+                <p class="mb-0 text-muted">Music, Visual Arts, Literature and performing arts workshops.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-transparent border-0">
+            <a href="#" class="text-decoration-none">Learn more →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course card -->
+      <div class="col-md-4">
+        <div class="card card-rounded shadow-sm h-100">
+          <div class="card-body">
+            <div class="d-flex align-items-center">
+              <div class="me-3">
+                <span class="badge-custom">Commerce</span>
+              </div>
+              <div>
+                <h5 class="mb-1">Commerce & ICT</h5>
+                <p class="mb-0 text-muted">Business basics, accounting, entrepreneurship and computer literacy.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-transparent border-0">
+            <a href="#" class="text-decoration-none">Learn more →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEACHERS -->
+<section id="teachers" class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center">Meet Our Teachers</h2>
+    <div class="row g-4 mt-4 text-center">
+      <div class="col-md-3">
+        <div class="teacher-card p-3 card-rounded shadow-sm">
+          <img src="images/teacher1.jpg" alt="Teacher 1" class="mx-auto d-block mb-3">
+          <h6 class="mb-0">Mr. Rahman</h6>
+          <small class="text-muted">Head of Science</small>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="teacher-card p-3 card-rounded shadow-sm">
+          <img src="images/teacher2.jpg" alt="Teacher 2" class="mx-auto d-block mb-3">
+          <h6 class="mb-0">Ms. Ayesha</h6>
+          <small class="text-muted">English</small>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="teacher-card p-3 card-rounded shadow-sm">
+          <img src="images/teacher3.jpg" alt="Teacher 3" class="mx-auto d-block mb-3">
+          <h6 class="mb-0">Mr. Karim</h6>
+          <small class="text-muted">Math</small>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="teacher-card p-3 card-rounded shadow-sm">
+          <img src="images/teacher4.jpg" alt="Teacher 4" class="mx-auto d-block mb-3">
+          <h6 class="mb-0">Mrs. Ruma</h6>
+          <small class="text-muted">Arts</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS & QUICK STATS -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row text-center g-3">
+      <div class="col-sm-6 col-md-3">
+        <div class="p-4 card-rounded shadow-sm">
+          <h3 class="mb-0">650+</h3>
+          <p class="mb-0 text-muted">Students Enrolled</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="p-4 card-rounded shadow-sm">
+          <h3 class="mb-0">70+</h3>
+          <p class="mb-0 text-muted">Qualified Teachers</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="p-4 card-rounded shadow-sm">
+          <h3 class="mb-0">45</h3>
+          <p class="mb-0 text-muted">National Awards</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="p-4 card-rounded shadow-sm">
+          <h3 class="mb-0">12</h3>
+          <p class="mb-0 text-muted">Years of Excellence</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS & NOTICE BOARD -->
+<section id="events" class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Notices -->
+      <div class="col-lg-6">
+        <h3 class="section-title">Notice Board</h3>
+        <div class="notice-item">
+          <h5 class="mb-1">Admission open for 2026</h5>
+          <p class="mb-0 text-muted">Apply online before Nov 30, 2025. Click apply to submit the admission form.</p>
+        </div>
+        <div class="notice-item">
+          <h5 class="mb-1">Science Fair 2025</h5>
+          <p class="mb-0 text-muted">Register your project by Oct 20, 2025.</p>
+        </div>
+        <div class="notice-item">
+          <h5 class="mb-1">Parent-Teacher Meeting</h5>
+          <p class="mb-0 text-muted">Scheduled on 10th September at 10:00 AM in Auditorium.</p>
+        </div>
+        <a href="#admission" class="btn btn-outline-primary mt-2">Apply Now</a>
+      </div>
+
+      <!-- Events list -->
+      <div class="col-lg-6">
+        <h3 class="section-title">Upcoming Events</h3>
+        <div class="list-group">
+          <div class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              <strong>Annual Sports Day</strong>
+              <div class="text-muted small">15 October 2025 — School Ground</div>
+            </div>
+            <span class="badge bg-primary rounded-pill">Sports</span>
+          </div>
+
+          <div class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              <strong>Art & Culture Fest</strong>
+              <div class="text-muted small">29 November 2025 — Auditorium</div>
+            </div>
+            <span class="badge bg-warning text-dark rounded-pill">Arts</span>
+          </div>
+
+          <div class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              <strong>Guest Lecture: Career Guidance</strong>
+              <div class="text-muted small">5 December 2025 — Lecture Hall</div>
+            </div>
+            <span class="badge bg-info text-dark rounded-pill">Seminar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADMISSION FORM -->
+<section id="admission" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center">Admission Form</h2>
+    <div class="row justify-content-center mt-4">
+      <div class="col-lg-8">
+        <form class="admission-form shadow-sm p-4">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" placeholder="Student full name" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Date of Birth</label>
+              <input type="date" class="form-control" required>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Parent / Guardian Name</label>
+              <input type="text" class="form-control" placeholder="Parent or guardian">
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Class Applying For</label>
+              <select class="form-select">
+                <option selected>Choose...</option>
+                <option>Class 6</option>
+                <option>Class 7</option>
+                <option>Class 8</option>
+                <option>Class 9</option>
+                <option>Class 10</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Address</label>
+              <textarea class="form-control" rows="2" placeholder="Permanent address"></textarea>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Phone</label>
+              <input type="tel" class="form-control" placeholder="+8801XXXXXXXXX">
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="parent@example.com">
+            </div>
+
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-primary btn-lg">Submit Application</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS (SAMPLE TABLE) -->
+<section id="results" class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center">Recent Exam Results</h2>
+    <div class="table-responsive mt-3 shadow-sm p-3 bg-white rounded">
+      <table class="table table-striped table-results mb-0">
+        <thead>
+          <tr>
+            <th>Student</th>
+            <th>Class</th>
+            <th>GPA</th>
+            <th>Position</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Arafat H.</td>
+            <td>10</td>
+            <td>5.00</td>
+            <td>1st</td>
+            <td>2025</td>
+          </tr>
+          <tr>
+            <td>Ruma K.</td>
+            <td>9</td>
+            <td>4.88</td>
+            <td>2nd</td>
+            <td>2025</td>
+          </tr>
+          <tr>
+            <td>Sohan M.</td>
+            <td>8</td>
+            <td>4.75</td>
+            <td>3rd</td>
+            <td>2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center">Photo Gallery</h2>
+    <div class="row g-3 mt-3">
+      <div class="col-md-4">
+        <img src="images/gallery1.jpg" alt="Gallery 1" class="img-fluid">
+      </div>
+      <div class="col-md-4">
+        <img src="images/gallery2.jpg" alt="Gallery 2" class="img-fluid">
+      </div>
+      <div class="col-md-4">
+        <img src="images/gallery3.jpg" alt="Gallery 3" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center">What Students Say</h2>
+    <div class="row g-3 mt-4">
+      <div class="col-md-4">
+        <div class="testimonial">
+          <p class="mb-1">"Stellar Academy helped me build confidence and achieve my dreams."</p>
+          <small class="text-muted">— Arafat, Class 10</small>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial">
+          <p class="mb-1">"Teachers are patient and classes are fun with practical learning."</p>
+          <small class="text-muted">— Ruma, Class 9</small>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial">
+          <p class="mb-1">"Great environment for sports and studies together."</p>
+          <small class="text-muted">— Sohan, Class 8</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT & MAP -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="text-muted">Email: info@stellaracademy.edu | Phone: +880 1X XXX XXXX</p>
+
+        <form class="contact-form mt-3">
+          <div class="mb-3">
+            <input class="form-control" placeholder="Your name" required>
+          </div>
+          <div class="mb-3">
+            <input class="form-control" type="email" placeholder="Email address" required>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+          </div>
+          <button class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+
+      <div class="col-lg-6">
+        <h2 class="section-title">Find Us</h2>
+        <!-- Replace the iframe src below with your own Google Maps embed link -->
+        <div class="ratio ratio-16x9 shadow-sm rounded">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-4">
+        <h5 class="text-white">Stellar Academy</h5>
+        <p class="text-white-50 small">Committed to excellence in education and character building.</p>
+      </div>
+      <div class="col-md-4">
+        <h6 class="text-white">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a class="text-white-50" href="#about">About</a></li>
+          <li><a class="text-white-50" href="#admission">Admission</a></li>
+          <li><a class="text-white-50" href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h6 class="text-white">Follow Us</h6>
+        <a class="btn btn-light btn-sm me-2" href="#">Facebook</a>
+        <a class="btn btn-light btn-sm" href="#">Instagram</a>
+      </div>
+    </div>
+
+    <div class="text-center mt-4 small">
+      &copy; 2025 Stellar Academy • All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS (bundle includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- small JS: open a modal or show success message on submit (demo only) -->
+<script>
+  document.querySelectorAll('.admission-form')[0]?.addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Application submitted (demo). In real site, connect this form to a server or email.');
+  });
+
+  document.querySelectorAll('.contact-form')[0]?.addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Message sent (demo). In real site, connect this form to a server or email.');
+  });
+</script>
+</body>
+</html>
