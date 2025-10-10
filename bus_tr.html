@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bus Travel Template - Bootstrap 3.4.1</title>
+  <!-- Bootstrap 3.4.1 CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin:0;
+      padding:0;
+    }
+    /* Top Search Bar */
+    .top-search {
+      margin-bottom:0;
+      padding:5px 0;
+      background:#f8f8f8;
+    }
+    .top-search .navbar-form {
+      text-align:center;
+      margin:0;
+      -moz-box-align: center;
+    }
+    .hero {
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      color: skyblue;
+      overflow: hidden;
+    }
+    .hero-overlay {
+      position: absolute;
+      top:0; left:0; right:0; bottom:0;
+      background: rgba(0,0,0,0.3);
+    }
+    .hero-text {
+      position: absolute;
+     
+      max-width: 700px;
+      color: skyblue;
+      text-align: center;
+    }
+    .hero-text p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    .hero-button {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .bus-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .navber-form.navber-center{
+        position: absolute;
+       box-shadow: center;}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Logo (Left) -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" alt="Logo" style="height:25px; display:inline;"> BusTravel
+      </a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Menu and Search -->
+    <div class="collapse navbar-collapse" id="myNavbar">
+      
+      <!-- Center Search Box -->
+      <form class="navbar-form navbar-center" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search...">
+        </div>
+        <button type="submit" class="btn btn-default">Search</button>
+      </form>
+
+      <!-- Right Menu -->
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#routes">Routes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" style="background-image: url('images/hero-bus.jpg');">
+  <div class="hero-overlay"></div>
+  <div class="hero-text">
+    <h1>Safe And Comfortable Bus Travel</h1>
+    <p>Easy ticket booking, route search, and special offers all in one place!</p>
+  </div>
+  <div class="hero-button">
+    <a href="#booking" class="btn btn-default btn-lg">Book Ticket</a>
+  </div>
+</section>
+
+<!-- Bus Gallery Section -->
+<div class="container text-center" style="padding:50px 0;">
+  <h2>Our Buses</h2>
+  <div class="row" style="margin-top:30px;">
+    <div class="col-sm-4">
+      <div class="thumbnail bus-card">
+        <img src="images/bus-1.jpg" alt="Bus 1">
+        <div class="caption">
+          <h4>Deluxe Coach</h4>
+          <p>AC, reclining seats, hot coffee service.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail bus-card">
+        <img src="images/bus-2.jpg" alt="Bus 2">
+        <div class="caption">
+          <h4>HiAce Shuttle</h4>
+          <p>Short route service, quick arrival.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail bus-card">
+        <img src="images/bus-3.jpg" alt="Bus 3">
+        <div class="caption">
+          <h4>Luxury Sleeper</h4>
+          <p>Night service with maximum comfort.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center" style="background:#222; color:white; padding:20px 0;">
+  <p>© 2025 BusTravel — All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+        
