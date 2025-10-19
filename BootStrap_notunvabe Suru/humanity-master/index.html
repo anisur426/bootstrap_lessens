@@ -17,288 +17,425 @@
   <link rel="stylesheet" href="css/testimonial.css" />
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+
+  <style>
+    /* Center navbar links horizontally */
+    .navbar-center {
+      float: none;
+      text-align: center;
+    }
+
+    .navbar-center>li {
+      float: none;
+      display: inline-block;
+    }
+
+    /* Desktop center logo spacing */
+    .logo-item {
+      padding: 0 20px;
+    }
+
+    .logo-item img {
+      vertical-align: middle;
+    }
+
+    /* For smaller screens: center the top logo */
+    .logo-center {
+      margin: 10px auto;
+      display: block;
+    }
+
+    /* Optional: remove navbar border for cleaner look */
+    .navbar-default {
+      border: none;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 
 <body>
-  <div class="header container">
-    <div class="visible-xs visible-sm col-xs-12 col-sm-12 text-center sm-logo">
-      <a rel="home" href="index.html">
-        <img src="img/logo.png" width="200" alt="logo">
-      </a>
+
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-default" style="background-color: rgba(153, 211, 213, 0.32);" role="navigation">
+    <div class="container">
+
+      <!-- Mobile Toggle Button -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="nav navbar-nav navbar-center">
+          <li style="padding-top: 50px;" class="active"><a href="index.html">প্রথম পাতা</a></li>
+          <li style="padding-top: 50px;"><a href="about.html">আমাদের সম্পর্কে</a></li>
+          <li style="padding-top: 50px;"><a href="service.html">সেবা</a></li>
+          <li style="padding-top: 50px;"><a href="gallery.html">গ্যালারি</a></li>
+
+          <!-- Center Logo for Desktop -->
+          <li class="hidden-xs hidden-sm logo-item">
+            <a href="index.html"><img src="img/logo.png" alt="লোগো" width="200"></a>
+          </li>
+
+          <li style="padding-top: 50px;"><a href="event.html">ইভেন্ট</a></li>
+          <li style="padding-top: 50px;"><a href="team.html">টিম</a></li>
+          <li style="padding-top: 50px;"><a href="donate.html">অনুদান</a></li>
+          <li style="padding-top: 50px;"><a href="contact.html">যোগাযোগ</a></li>
+        </ul>
+      </div>
+
     </div>
-  </div>
+  </nav>
 
-  <!-- ব্যাঙ্গলী ন্যাভিগেশন বার শুরু -->
-  <div class="navbar" role="navigation"> <!-- ব্যাঙ্গলী: প্রধান ন্যাভিগেশন কন্টেইনার -->
-
-    <div class="navbar-header"> <!-- ব্যাঙ্গলী: মোবাইল ভিউয়ের জন্য হেডার -->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <!-- ব্যাঙ্গলী: মোবাইলে মেনু টগল করার বাটন -->
-        <span class="sr-only">ন্যাভিগেশন টগল করুন</span> <!-- ব্যাঙ্গলী: স্ক্রিন রিডারের জন্য লেখা -->
-        <span class="icon-bar"></span> <!-- ব্যাঙ্গলী: হ্যামবারগার মেনুর প্রথম বার -->
-        <span class="icon-bar"></span> <!-- ব্যাঙ্গলী: হ্যামবারগার মেনুর দ্বিতীয় বার -->
-        <span class="icon-bar"></span> <!-- ব্যাঙ্গলী: হ্যামবারগার মেনুর তৃতীয় বার -->
-      </button>
-    </div>
-
-    <div class="collapse navbar-collapse"> <!-- ব্যাঙ্গলী: ভেঙ্গে পড়া (collapsible) ন্যাভ কনটেন্ট -->
-      <ul class="nav navbar-nav"> <!-- ব্যাঙ্গলী: ন্যাভিগেশন তালিকা শুরু -->
-
-        <li class="selected"><a href="index.html">প্রথম পাতা</a></li> <!-- ব্যাঙ্গলী: হোম পেইজ -->
-        <li><a href="about.html">আমাদের সম্পর্কে</a></li> <!-- ব্যাঙ্গলী: পরিচিতি পেইজ -->
-        <li><a href="service.html">সেবা</a></li> <!-- ব্যাঙ্গলী: সেবা পেইজ -->
-        <li><a href="gallery.html">গ্যালারি</a></li> <!-- ব্যাঙ্গলী: গ্যালারি পেইজ -->
-
-        <li class="hidden-xs hidden-sm"> <!-- ব্যাঙ্গলী: বড় স্ক্রিনে লোগো দেখানোর জন্য -->
-          <a rel="home" href="index.html">
-            <img class="logo" src="img/logo.png" width="200" alt="ব্যাঙ্গলীর লোগো"> <!-- ব্যাঙ্গলী: লোগো ছবি -->
-          </a>
-        </li>
-
-        <li><a href="event.html">ইভেন্ট</a></li> <!-- ব্যাঙ্গলী: ইভেন্ট পেইজ -->
-        <li><a href="team.html">টিম</a></li> <!-- ব্যাঙ্গলী: দল/টিম পেইজ -->
-        <li><a href="donate.html">অনুদান</a></li> <!-- ব্যাঙ্গলী: অনুদান পেইজ -->
-        <li><a href="contact.html">যোগাযোগ</a></li> <!-- ব্যাঙ্গলী: যোগাযোগ পেইজ -->
-
-      </ul>
-    </div>
-
-  </div>
-  <!-- ব্যাঙ্গলী ন্যাভিগেশন বার শেষ -->
-
-
-  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"
+    style="background-color: rgba(255, 24, 24, 0.32);">
+    <!-- সূচকসমূহ -->
     <ol class="carousel-indicators">
       <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
       <li data-target="#carousel-example-generic" data-slide-to="1"></li>
       <li data-target="#carousel-example-generic" data-slide-to="2"></li>
     </ol>
 
-    <!-- Wrapper for slides -->
+    <!-- স্লাইডের জন্য মোড়ক -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
         <img src="img/slide3.jpg" alt="">
         <div class="carousel-caption">
-          Make Donation
+          অনুদান দিন
         </div>
       </div>
       <div class="item">
         <img src="img/slide2.jpg" alt="">
         <div class="carousel-caption">
-          Be a Donator
+          দাতা হোন
         </div>
       </div>
       <div class="item">
         <img src="img/slide1.jpg" alt="">
         <div class="carousel-caption">
-          Be a volunteer
+          স্বেচ্ছাসেবক হোন
         </div>
       </div>
     </div>
 
-    <!-- Controls -->
+    <!-- নিয়ন্ত্রণ বোতাম -->
     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
+      <span class="sr-only">পূর্ববর্তী</span>
     </a>
+
+    <!--  -->
     <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
+      <span class="sr-only">পরবর্তী</span>
     </a>
   </div>
 
+  <!-- হেডার শুরু -->
   <div class="container header-start text-center">
+    <!-- আইকন -->
     <div class="heading-icon">
       <i class="fa fa-3x fa-heart"></i>
     </div>
-    <h1 class="main-text">Show your Love for the Humanity</h1>
-    <p class="text-center sub-text"><em class="first-line">Lorem ipsum dolor sit amet, consectetur adipisiciSng elit,
-        sed do eiusmod tempor </em><em class="next-line"> incididunt ut labore et dolore magna aliqua.A sed do eiusmod
-        tempor incididunt ut labore et dolore magna.</em></p>
+
+    <!-- মূল শিরোনাম -->
+    <h1 class="main-text">মানবতার প্রতি আপনার ভালোবাসা প্রকাশ করুন</h1>
+
+    <!-- উপশিরোনাম / বর্ণনামূলক টেক্সট -->
+    <p class="text-center sub-text">
+      <em class="first-line">
+        লরেম ইপসম ডলার সিট আমেট, কনসেক্টেতুর অ্যাডিপিসিসিং এলিট,
+        সেড ডো ইইউসমড টেম্পর
+      </em>
+      <em class="next-line">
+        ইনসিডিডুন্ট উত ল্যাবরে এত ডোলরে ম্যাগনা আলিকুয়া। সেড ডো ইইউসমড
+        টেম্পর ইনসিডিডুন্ট উত ল্যাবরে এত ডোলরে ম্যাগনা।
+      </em>
+    </p>
   </div>
 
+  <!-- বিভাজক (ডিভাইডার) -->
   <div class="divider col-sm-12 col-xs-12 col-md-12">
-    <div class="header-text"><span>Blog</span> News</div>
+    <!-- হেডার টেক্সট -->
+    <div class="header-text"><span>ব্লগ</span> সংবাদ</div>
   </div>
 
+  <!-- ব্লগ সেকশন শুরু -->
   <section class="blog">
+
+    <!-- একক ব্লগ আইটেম -->
     <div class="item col-md-4">
       <div class="blok-read-sm">
+
+        <!-- ব্লগ ইমেজ -->
         <a href="single1.html" class="hover-image">
-          <img src="img/sea.jpg" alt="image">
+          <img src="img/sea.jpg" alt="ছবি">
           <span class="layer-block"></span>
         </a>
+
+        <!-- সম্পাদকীয় পছন্দ -->
         <div class="editor-choice">
           <i class="fa fa-star"></i>
-          <a href="#">Editor’s Choice</a>
+          <a href="#">সম্পাদকের পছন্দ</a>
         </div>
+
+        <!-- কনটেন্ট ব্লক -->
         <div class="content-block">
           <span class="point-caption bg-blue-point"></span>
           <span class="bottom-line bg-blue-point"></span>
-          <h4>Discovering OM: A visit back to The Vedas</h4>
-          <p>Gregor then turned to look out the window at the dull weather. Drops of rain could pane,which made..</p>
-          <div class="button-main bg-fio-point">read more</div>
+
+          <!-- ব্লগ শিরোনাম -->
+          <h4>অসহায় মানুষের পাশে: আমাদের উদ্যোগ</h4>
+
+          <!-- সংক্ষিপ্ত বিবরণ -->
+          <p>
+            আমাদের সংগঠন গ্রামের গরীব পরিবারগুলোর জন্য খাবার ও পোশাক সরবরাহ করছে।
+            এক বেলা খাবার বা একটি শীতবস্ত্র – তাদের মুখে এনে দেয় নতুন হাসি।
+          </p>
+
+          <!-- আরও পড়ুন বোতাম -->
+          <div class="button-main bg-fio-point">আরও পড়ুন</div>
+
+          <!-- পছন্দ ও মন্তব্য -->
           <div class="like-wrap">
-            <a href="#"><i class="fa fa-heart col-red"></i></a><span>224</span>
-            <a href="#"><i class="fa fa-comment col-green"></i></a><span>89</span>
+            <a href="#"><i class="fa fa-heart col-red"></i></a><span>৫১২</span>
+            <a href="#"><i class="fa fa-comment col-green"></i></a><span>৭৬</span>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- দ্বিতীয় ব্লগ আইটেম -->
     <div class="item col-md-4">
       <div class="blok-read-sm">
-        <a href="single1.html" class="hover-image">
-          <img src="img/sea.jpg" alt="image">
+
+        <!-- ব্লগ ইমেজ -->
+        <a href="single2.html" class="hover-image">
+          <img src="img/water.jpg" alt="ছবি">
           <span class="layer-block"></span>
         </a>
+
         <div class="editor-choice">
           <i class="fa fa-star"></i>
-          <a href="#">Editor’s Choice</a>
+          <a href="#">সম্পাদকের পছন্দ</a>
         </div>
+
         <div class="content-block">
           <span class="point-caption bg-blue-point"></span>
           <span class="bottom-line bg-blue-point"></span>
-          <h4>Discovering OM: A visit back to The Vedas</h4>
-          <p>Gregor then turned to look out the window at the dull weather. Drops of rain could pane,which made..</p>
-          <div class="button-main bg-fio-point">read more</div>
+
+          <!-- ব্লগ শিরোনাম -->
+          <h4>স্বচ্ছ পানির প্রকল্প: জীবনের নতুন আশা</h4>
+
+          <!-- সংক্ষিপ্ত বিবরণ -->
+          <p>
+            নিরাপদ পানির অভাবে ভুগছিল শত শত পরিবার। আমাদের “স্বচ্ছ জল” প্রকল্পের মাধ্যমে
+            আজ তারা পাচ্ছে বিশুদ্ধ পানীয় জল, কমেছে জলবাহিত রোগের হার।
+          </p>
+
+          <div class="button-main bg-fio-point">আরও পড়ুন</div>
+
           <div class="like-wrap">
-            <a href="#"><i class="fa fa-heart col-red"></i></a><span>224</span>
-            <a href="#"><i class="fa fa-comment col-green"></i></a><span>89</span>
+            <a href="#"><i class="fa fa-heart col-red"></i></a><span>৪৬৮</span>
+            <a href="#"><i class="fa fa-comment col-green"></i></a><span>৮৩</span>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- তৃতীয় ব্লগ আইটেম -->
     <div class="item col-md-4">
       <div class="blok-read-sm">
-        <a href="single1.html" class="hover-image">
-          <img src="img/sea.jpg" alt="image">
+
+        <!-- ব্লগ ইমেজ -->
+        <a href="single3.html" class="hover-image">
+          <img src="img/education.jpg" alt="ছবি">
           <span class="layer-block"></span>
         </a>
+
         <div class="editor-choice">
           <i class="fa fa-star"></i>
-          <a href="#">Editor’s Choice</a>
+          <a href="#">সম্পাদকের পছন্দ</a>
         </div>
+
         <div class="content-block">
           <span class="point-caption bg-blue-point"></span>
           <span class="bottom-line bg-blue-point"></span>
-          <h4>Discovering OM: A visit back to The Vedas</h4>
-          <p>Gregor then turned to look out the window at the dull weather. Drops of rain could pane,which made..</p>
-          <div class="button-main bg-fio-point">read more</div>
+
+          <!-- ব্লগ শিরোনাম -->
+          <h4>শিক্ষাই আলোর পথ: বস্তির শিশুদের জন্য স্কুল</h4>
+
+          <!-- সংক্ষিপ্ত বিবরণ -->
+          <p>
+            বস্তির শিশুদের জন্য বিনামূল্যে প্রাথমিক শিক্ষা কর্মসূচি চলছে।
+            এখন তারাও শিখছে অক্ষর, স্বপ্ন দেখছে শিক্ষক, ডাক্তার কিংবা প্রকৌশলী হওয়ার।
+          </p>
+
+          <div class="button-main bg-fio-point">আরও পড়ুন</div>
+
           <div class="like-wrap">
-            <a href="#"><i class="fa fa-heart col-red"></i></a><span>224</span>
-            <a href="#"><i class="fa fa-comment col-green"></i></a><span>89</span>
+            <a href="#"><i class="fa fa-heart col-red"></i></a><span>৬০১</span>
+            <a href="#"><i class="fa fa-comment col-green"></i></a><span>৯৫</span>
           </div>
         </div>
       </div>
     </div>
+
   </section>
+  <!-- ব্লগ সেকশন শেষ -->
 
 
+  <!-- বিভাজক (ডিভাইডার) -->
   <div class="divider col-sm-12 col-xs-12 col-md-12">
-    <div class="header-text">Our <span>Testimonials</span></div>
+    <div class="header-text" style="margin-top: 30px;"> আমাদের <span>প্রশংসাপত্র</span></div>
   </div>
 
+  <!-- প্রশংসাপত্র সেকশন শুরু -->
   <section class="testimonial">
+
+    <!-- বাম দিক: টেস্টিমোনিয়াল স্লাইড -->
     <div class="col-md-7 testimonial-blog">
       <div id="wrapper">
-        <!-- DEMO -->
+
+        <!-- টেস্টিমোনিয়াল স্লাইডার -->
         <div class="testimonials-slider">
-          <div class="slide">
-            <div class="testimonials-carousel-thumbnail"><img width="120" alt="" src="images/team1.jpg"></div>
+
+          <!-- প্রথম স্লাইড -->
+          <div class="slide"
+            style="background-color: white; padding-top: 30px; padding-bottom: 30px; padding-left: 30px; ">
+            <div class="testimonials-carousel-thumbnail">
+              <img width="120" alt="ছবি" src="images/team1.jpg">
+            </div>
             <div class="testimonials-carousel-context">
               <div class="testimonials-name">
-                Rub elvi <span>shuvohabib.com</span>
+                রুব এলভি <span>shuvohabib.com</span>
               </div>
               <div class="testimonials-carousel-content">
-                <p>Sed posuere consectetur est at lobortis. Fusce dapibus, tellus ac cursus commodo.Cras mattis
-                  consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis. Fusce dapibus, tellus
-                  ac cursus commodo.</p>
+                <p>
+                  সেড পজুয়ের কনসেক্টেতুর এস্ত এট লোবরটিস। ফুস ড্যাপিবাস, টেলাস অ্যাক কোর্সাস কমোডো।
+                  ক্রাস মাটিস কনসেক্টেতুর পুরাস সিট অ্যামেট ফারমেন্টাম। সেড পজুয়ের কনসেক্টেতুর এস্ত এট
+                  লোবরটিস। ফুস ড্যাপিবাস, টেলাস অ্যাক কোর্সাস কমোডো।
+                </p>
               </div>
             </div>
           </div>
 
-          <div class="slide">
+          <!-- দ্বিতীয় স্লাইড -->
+          <div class="slide"
+            style="background-color: white; padding-top: 30px; padding-bottom: 30px; padding-left: 30px; ">
             <div class="testimonials-carousel-thumbnail">
-              <img width="120" alt="" src="images/team2.jpg">
+              <img width="120" alt="ছবি" src="images/team2.jpg">
             </div>
             <div class="testimonials-carousel-context">
-              <div class="testimonials-name">Jewel Jahan <span>technextit.com</span>
+              <div class="testimonials-name">
+                জুয়েল জাহান <span>technextit.com</span>
               </div>
               <div class="testimonials-carousel-content">
-                <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis. Fusce
-                  dapibus, tellus ac cursus commodo.</p>
+                <p>
+                  ক্রাস মাটিস কনসেক্টেতুর পুরাস সিট অ্যামেট ফারমেন্টাম। সেড পজুয়ের কনসেক্টেতুর এস্ত এট
+                  লোবরটিস। ফুস ড্যাপিবাস, টেলাস অ্যাক কোর্সাস কমোডো।
+                </p>
               </div>
             </div>
           </div>
 
-          <div class="slide">
-            <div class="testimonials-carousel-thumbnail"><img width="120" alt="" src="images/team3.jpg"></div>
+          <!-- তৃতীয় স্লাইড -->
+          <div class="slide"
+            style="background-color: white; padding-top: 30px; padding-bottom: 30px; padding-left: 30px; ">
+            <div class="testimonials-carousel-thumbnail">
+              <img width="120" alt="ছবি" src="images/team3.jpg">
+            </div>
             <div class="testimonials-carousel-context">
-              <div class="testimonials-name">Mark Zuckerberg<span>www.Facebook.com</span></div>
+              <div class="testimonials-name">
+                মার্ক জাকারবার্গ <span>www.facebook.com</span>
+              </div>
               <div class="testimonials-carousel-content">
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when
-                  looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal..</p>
+                <p>
+                  এটা অনেক আগেই প্রমাণিত যে, কোনো পৃষ্ঠা পড়ার সময় পাঠকের দৃষ্টি তার বিন্যাসে বিভ্রান্ত হয়।
+                  Lorem Ipsum ব্যবহারের উদ্দেশ্য হলো এটি একটি তুলনামূলকভাবে প্রাকৃতিক টেক্সট প্রদান করে।
+                </p>
               </div>
             </div>
           </div>
+
         </div>
-        <!-- END DEMO -->
+        <!-- টেস্টিমোনিয়াল স্লাইডার শেষ -->
         <div class="clearfix"></div>
       </div>
     </div>
+
+    <!-- ডান দিক: সাবস্ক্রিপশন ফর্ম -->
     <div class="col-md-4 subscribe-form">
       <div class="subscribe">
-        <h4>Subscribe to Newsletter</h4>
+        <h4>নিউজলেটারে সদস্য হোন</h4>
+
         <div class="email-field">
           <form action="http://demo.nrgthemes.com/">
             <div class="email-input">
-              <input type="email" placeholder="Enter your email..." required>
+              <input type="email" placeholder="আপনার ইমেইল লিখুন..." required>
               <i class="fa fa-check col-green"></i>
             </div>
-            <button type="submit" class="button-main bg-green">Submit</button>
+            <button type="submit" class="button-main bg-green">জমা দিন</button>
           </form>
-          <span>We never spam :)</span>
+          <span>আমরা কখনও স্প্যাম করি না 🙂</span>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ============FOOTER============= -->
+  </section>
+  <!-- প্রশংসাপত্র সেকশন শেষ -->
+
+
+  <!-- ============ ফুটার ============= -->
   <footer id="footer">
     <div class="footer-content container">
+
+      <!-- প্রথম অংশ: ঠিকানা ও মেনু -->
       <div class="footer-adress text-center col-xs-12 col-sm-4 col-md-4">
-        <h4>Great love for humanity</h4>
+        <h4>মানবতার জন্য মহৎ ভালোবাসা</h4>
         <ul class="footer-menus">
-          <li>Home /</li>
-          <li>About </li><br />
-          <li>Service /</li>
-          <li>Gallery /</li>
-          <li>Contact</li>
+          <li>হোম /</li>
+          <li>সম্পর্কে </li><br />
+          <li>সেবা /</li>
+          <li>গ্যালারি /</li>
+          <li>যোগাযোগ</li>
         </ul>
       </div>
+
+      <!-- দ্বিতীয় অংশ: সামাজিক যোগাযোগ ও তথ্য -->
       <div class="footer-second col-xs-12 col-sm-4 col-md-4">
         <div class="social-block text-center">
           <div class="social-share">
             <i class="fa fa-2x fa-facebook"></i>
-            <i class="fa fa-2x  fa-twitter"></i>
-            <i class="fa fa-2x  fa-google-plus"></i>
-            <i class="fa fa-2x  fa-instagram"></i>
+            <i class="fa fa-2x fa-twitter"></i>
+            <i class="fa fa-2x fa-google-plus"></i>
+            <i class="fa fa-2x fa-instagram"></i>
           </div>
         </div>
-        <p class="text-center footer-text1">123 456 7890</p>
+        <p class="text-center footer-text1">১২৩ ৪৫৬ ৭৮৯০</p>
         <p class="text-center footer-text">humanity@shuvohabib.com</p>
       </div>
+
+      <!-- তৃতীয় অংশ: কপিরাইট -->
       <div class="footer-third col-xs-12 col-sm-4 col-md-4">
         <div class="copyright">
-          <span>Copyright 2014 Theme</span><br>
-          <span>All Rights Reserved</span>
+          <span>স্বত্ব © ২০১৪ থিম</span><br>
+          <span>সমস্ত অধিকার সংরক্ষিত</span>
         </div>
       </div>
+
     </div>
-    <div class="move-top-page">
-    </div>
+
+    <!-- পৃষ্ঠার উপরে ফিরে যাওয়ার বোতাম -->
+    <div class="move-top-page"></div>
   </footer>
+
 
   <!-- script references -->
   <script src="js/jquery.min.js"></script>
